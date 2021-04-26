@@ -16,7 +16,7 @@
       <div class="jumbotron text-center">
         <h1>Mission to Mars</h1>
         <!-- Add a button to activate scraping script -->
-        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        <p><a class="btn btn-primary btn-lg btn-block" href="/scrape" role="button">Scrape New Data</a></p>
       </div>
       <!-- Add section for Mars News -->
       <div class="row" id="mars-news">
@@ -36,7 +36,7 @@
           <h2>Featured Mars Image</h2>
           <img
             src="{{mars.featured_image }}"
-            class="img-responsive"
+            class="img-responsive; img-thumbnail"
             alt="Responsive image"
           />
         </div>
@@ -46,6 +46,31 @@
             <h4>Mars Facts</h4>
             {{ mars.facts | safe }}
           </div>
+        </div>
+      </div>
+      <!-- Section for Mars Hemispheres -->
+      <div class="media-container">
+        <h2 style="text-align:center">Mars Hemispheres</h2>
+        {% for hemisphere in mars.hemispheres %}
+          <div class="col-md-3">
+            <figure>
+              <img
+                src="{{hemisphere.img_url }}"
+                class="img-responsive; img-thumbnail"
+                alt="Responsive image"
+              />
+              <figcaption>{{hemisphere.title}}</figcaption>
+            </figure>
+          </div>
+        {% endfor %}
+      </div>
+      <!-- Additional bootstrap element -->
+      <div class="row" id="mars-quote">
+        <div class="col-md-12">
+          <blockquote style="margin-top: 30px">
+            <p>Mars is there, waiting to be reached.</p>
+            <footer>Buzz Aldrin in "Buzz Aldrin: Down to Earth", <cite title="Source Title">Psychology Today</cite></footer>
+          </blockquote>
         </div>
       </div>
     </div>

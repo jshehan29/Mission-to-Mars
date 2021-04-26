@@ -1,6 +1,7 @@
 # Add files from module to be ignored
 Practice.ipynb
 .vscode/
+Mission_to_Mars_Challenge.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

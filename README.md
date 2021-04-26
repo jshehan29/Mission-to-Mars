@@ -1,1 +1,5 @@
-# Mission-to-Mars
+# Mission to Mars
+
+## Mission to Mars Overview
+
+This project used web scraping to search various websites and gather data to be included in a web application to showcase information on Mars. The web scrapes visited mars-related websites to get the latest Mars news, Mars images, and Mars facts. The web scraping code was written in Python version 3.8.8 and initially developed in Jupyter Notebook. The Jupyter Notebook code was converted into .py files with VS Code. Mongo DB was used to store the information gathered from the Python web scrapes, and Flask was used to develop a web application to run the scraping code and display the web page written in HTML. Finally, Bootstrap 3 was used to make the web page responsive to mobile devices ensuring the information displays correctly. This was verified with the developer tools in Google Chrome.
